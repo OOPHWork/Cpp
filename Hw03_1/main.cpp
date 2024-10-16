@@ -10,7 +10,6 @@ public:
         scores = new int[size];
     }
 
-    // 깊은 복사 생성자 추가
     Dept(const Dept& dept) {
         size = dept.size;
         scores = new int[size];
@@ -39,7 +38,7 @@ public:
     }
 };
 
-int countPass(const Dept& dept) { // 복사 생성자 대신 참조로 전달
+int countPass(const Dept& dept) {
     int count = 0;
     for (int i = 0; i < dept.getSize(); i++) {
         if(dept.isOver60(i)) count++;
